@@ -1,0 +1,83 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.page{
+  min-width: 1280px; /*ширина  макета*/
+  margin: 0 auto; /*центрем*/
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color:rgba(255, 239, 154, 0.5);
+}
+
+.intro{ /*грид конйтенер*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 247px 181px 161px;
+  grid-row-gap: 20px; /*расстяние между рядами*/ 
+  background-color: blue;
+  min-height: 365px;
+  margin-bottom: 115px;
+}
+
+
+.intro__img{ /*грид элемент*/
+  grid-column: 1/2;
+  grid-row: 1/4;
+  width: 100%; /*тянется на всю ширину родителя*/
+  height: 100%; /*чтобы кратинка вместилась в ячейку*/
+  object-fit: cover; /*чтоб картинка не сплющиваласт на меньших экарнах*/
+
+}
+
+.intro__title{ /*грид элемент*/
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: end;  /*грид элемен прдмется к нижнему краю ячейки*/
+}
+
+
+.intro__text{/*грид элемент*/
+  grid-column: 2/3;
+  grid-row: 2/3;
+  
+}
+
+.toggler{/*грид элемент, котрый сам вялется грид контенйером*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.toggler__prev, .toggler__next{
+  padding: 30px;
+}
+
+.pluses{
+  display: flex;
+  justify-content: space-between;
+  gap: 32px; /*это свойство пришло от гридов, даже на уземх экранах расстяние не изменится*/
+  background-color: #E5E5E5;
+  padding: 20px 50px;
+  margin-bottom: 110px;
+}
+
+.pluses__item{ /*флекс элемент, который есть грид контенйер*/
+  display: grid;
+  grid-template-columns: 50px 1fr; /*1-ый солбец займет 50px ,  а втрой столбец все оставшееся пространство*/
+  gap: 10px;
+  
+  width: 268px;
+}
+
+.pluses__text{
+  grid-column: 1/3;
+}
